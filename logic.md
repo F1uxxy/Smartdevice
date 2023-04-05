@@ -6,6 +6,9 @@
 
 ```mermaid
 flowchart TD
-    A-->B
+    start([greenLight])
+    getButtonStatus(Get Button Status)
+    checkButton{has button been pressed}
+
 
 ```
