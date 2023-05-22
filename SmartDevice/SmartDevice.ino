@@ -24,23 +24,13 @@ void setup() {
     while (1)
       ;
   }
+
+  // Real Time Clock (RTC)
+  rtc.begin(DateTime(F(__DATE__), F(__TIME__)));
+  Serial.println("initialization done.");
+  logEvent("System Initialisation...");
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-            ();
-
-  Delay(250):
-}
-
-
-/*
-@params none
-  @return none
- */
-
-
-void () {
-
-  
 }
