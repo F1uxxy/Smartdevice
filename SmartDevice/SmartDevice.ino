@@ -34,3 +34,43 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 }
+
+
+// Traffic Lights - LED Outputs
+#define ledRed A0
+#define ledYellow A1 
+#define ledGreen A2
+
+// Servo
+#include <Servo.h>
+Servo myservo;
+
+// Line Sensor
+#define lineSensorPin 3
+
+// Crash Sensor / Button
+#define crashSensor 7
+
+
+
+
+
+
+// Crash Sensor / Button
+pinMode(crashSensor, INPUT);
+
+
+// Line Sensor
+pinMode(lineSensorPin, OUTPUT);
+
+// Servo
+  myservo.attach(9);  // attaches the servo on pin 9 to the servo object
+
+
+// Traffic Lights - LED Outputs
+pinMode(ledRed, OUTPUT);
+pinMode(ledYellow, OUTPUT);
+pinMode(ledGreen, OUTPUT);
+
+//Potentiometer
+pinMode(pot, INPUT);
