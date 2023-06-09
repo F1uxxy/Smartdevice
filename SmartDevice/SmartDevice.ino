@@ -10,6 +10,23 @@ DateTime rightNow;  // used to store the current time.
 // SD Card - Confirm Pin
 #define SDpin 10
 
+
+// Traffic Lights - LED Outputs
+#define ledRed A0
+#define ledYellow A1
+#define ledGreen A2
+
+// Servo
+#include <Servo.h>
+Servo myservo;
+
+// Line Sensor
+#define lineSensorPin 3
+
+// Crash Sensor / Button
+#define crashSensor 7
+
+
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);  // Open serial communications and wait for port to open:
@@ -28,49 +45,31 @@ void setup() {
   // Real Time Clock (RTC)
   rtc.begin(DateTime(F(__DATE__), F(__TIME__)));
   Serial.println("initialization done.");
+
+
+  // Crash Sensor / Button
+  pinMode(crashSensor, INPUT);
+
+
+  // Line Sensor
+  pinMode(lineSensorPin, OUTPUT);
+
+  // Servo
+  myservo.attach(9);  // attaches the servo on pin 9 to the servo object
+
+
+  // Traffic Lights - LED Outputs
+  pinMode(ledRed, OUTPUT);
+  pinMode(ledYellow, OUTPUT);
+  pinMode(ledGreen, OUTPUT);
+
+  //Potentiometer
+  pinMode(pot, INPUT);
+
+
   logEvent("System Initialisation...");
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
 }
-
-
-// Traffic Lights - LED Outputs
-#define ledRed A0
-#define ledYellow A1 
-#define ledGreen A2
-
-// Servo
-#include <Servo.h>
-Servo myservo;
-
-// Line Sensor
-#define lineSensorPin 3
-
-// Crash Sensor / Button
-#define crashSensor 7
-
-
-
-
-
-
-// Crash Sensor / Button
-pinMode(crashSensor, INPUT);
-
-
-// Line Sensor
-pinMode(lineSensorPin, OUTPUT);
-
-// Servo
-  myservo.attach(9);  // attaches the servo on pin 9 to the servo object
-
-
-// Traffic Lights - LED Outputs
-pinMode(ledRed, OUTPUT);
-pinMode(ledYellow, OUTPUT);
-pinMode(ledGreen, OUTPUT);
-
-//Potentiometer
-pinMode(pot, INPUT);
