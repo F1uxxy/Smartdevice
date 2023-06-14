@@ -2,7 +2,7 @@
 
 ## Smart Device Theme
 
-A smart chess board that
+A smart chess board that makes it easier for two people to play against eachother, which also aids new players
 
 
 ## Behaviours
@@ -21,3 +21,13 @@ When the board does anything log the event
 
 
 1. Behaviour 1
+if the crash  button is pressed turn green led on
+2. Behaviour 2 
+3. if the line sensor is triggered turn red led on
+4. Behaviour 3
+5. if the pir is triggered flash the amber light on and off
+6. Behaviour 4
+7. if the potentiometer reaches a certain point activate the servo
+When the potentiometer is limited trun the serveo 180 degrees to the other player
+When the servo is at the minimum turn the servo 180 degrees to the other player
+8. if the moisture sensor reaches a certain level activate the DC motor turning the fan on
