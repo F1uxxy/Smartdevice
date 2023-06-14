@@ -11,6 +11,7 @@ DateTime rightNow;  // used to store the current time.
 #define SDpin 10
 
 
+
 // Traffic Lights - LED Outputs
 #define ledRed A0
 #define ledYellow A1
@@ -63,13 +64,32 @@ void setup() {
   pinMode(ledYellow, OUTPUT);
   pinMode(ledGreen, OUTPUT);
 
-  //Potentiometer
-  pinMode(pot, INPUT);
 
 
-  logEvent("System Initialisation...");
+ /* logEvent("System Initialisation...");
+  * 
+  */
+  
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
 }
+
+/*
+ If the crash sensor is triggered turn the green led on
+ */
+void greenLight () {
+if crashSensor = true
+ledGreen = HIGH
+}
+
+/*
+ If the line sensor is triggered turn the red led on
+ */
+ void redLight () {
+ if lineSensor = true
+ ledRed = HIGH
+ /*
+  
+  */
